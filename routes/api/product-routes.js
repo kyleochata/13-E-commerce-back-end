@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Category and Tag data
   try {
     const productData = await Product.findAll({
-      include: [{ model: Category }, { model: Tag, through: ProductTag }],
+      include: [{ model: Category }, { model: Tag }],
     });
     //expect .findAll to return an array
     if (productData.length === 0) {
@@ -28,7 +28,7 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Category and Tag data
   try {
     const oneProductData = await Product.findByPk(req.params.id, {
-      include: [{ model: Category }, { model: Tag, through: ProductTag }]
+      include: [{ model: Category }, { model: Tag }]
     });
     if (!oneProductData) {
       return res.status(404).json({ message: "Sorry no product with that id was found. Please try again." })
@@ -116,12 +116,12 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', async (req, res) => {
   // delete one product by its `id` value
   try {
-    const destoryProduct = await Product.destroy({
+    const destroyProduct = await Product.destroy({
       where: {
         id: req.params.id
       }
     })
-    if (destoryProduct === 0) {
+    if (destroyProduct === 0) {
       return res.json({ message: "Sorry no product with that id was found. Please try again." })
     }
     return res.status(200).json({ message: `Product with the id of ${req.params.id} has been destroyed` })

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Tag, Product, ProductTag } = require('../../models');
+const { Tag, Product } = require('../../models');
 
 // The `/api/tags` endpoint
 
@@ -7,8 +7,8 @@ router.get('/', async (req, res) => {
   // find all tags
   // be sure to include its associated Product data
   try {
-    const tagData = await Category.findAll({
-      include: [{ model: Product, through: ProductTag }]
+    const tagData = await Tag.findAll({
+      include: [{ model: Product }]
     });
     return res.status(200).json(tagData)
   } catch (err) {
@@ -21,7 +21,7 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Product data
   try {
     const oneTagData = await Tag.findByPk(req.params.id, {
-      include: [{ model: Product, through: ProductTag }]
+      include: [{ model: Product }]
     });
     if (!oneTagData) {
       return res.status(404).json({ message: "Sorry no Tag with that id was found. Please try again." })

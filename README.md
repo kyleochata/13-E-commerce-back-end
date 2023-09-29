@@ -56,7 +56,7 @@ GET, PUT, DELETE requests work with these end points
 
 ## Video Demo
 
-A video walkthrough can be found [here](w). This video shows the entire program from initial start up and all the available options.
+A video walkthrough can be found [here](). This video shows the entire program from initial start up and all the available options.
 
 ## Usage
 

@@ -1,7 +1,5 @@
 # [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&repeat=false&width=435&lines=E-Commerce+Back-End)](https://git.io/typing-svg)
 
-Object-Relational Mapping (ORM)
-
 [![MIT license](https://img.shields.io/badge/License-MIT-blue)](https://lbesson.mit-license.org)
 
 ## Description
@@ -42,13 +40,13 @@ When that .env file is completed navigate to the server.js level and open up a t
 
 In insomnia the accepted end points are the following:
 
-GET & POST requests work with these end points
+GET, POST, DELETE requests work with these end points
 
 - http://localhost:3001/api/categories/
 - http://localhost:3001/api/products/
 - http://localhost:3001/api/tags/
 
-GET, PUT, DELETE requests work with these end points
+GET, PUT requests work with these end points
 
 - http://localhost:3001/api/products/:id
 - http://localhost:3001/api/categories/:id
@@ -56,7 +54,7 @@ GET, PUT, DELETE requests work with these end points
 
 ## Video Demo
 
-A video walkthrough can be found [here](). This video shows the entire program from initial start up and all the available options.
+A video walkthrough can be found [here](https://drive.google.com/file/d/1ayY0vFitfpQ3lw0gjjZc5ygmnH99vnp4/view). This video shows the entire program from initial start up and all the available options.
 
 ## Usage
 
@@ -75,14 +73,6 @@ This repository is allowed for use in a learning environment to evaluate and ana
 - nodemon for their [modules](https://www.npmjs.com/package/nodemon)
 - UCI BootCamp for the acceptance criteria.
 - AskBCS for their assistance in troubleshooting.
-
-## Test
-
-Use "npm start" in your terminal to activate the server locally. Another option is to use "node server" to get the local server to initiate to view the application locally.
-
-## Known Inquirer Bug
-
-Double enter issue with prompts. If you hit enter twice too fast and add, or update it will act as if two inquirer prompts have been fired and you will see double questions. This is difficult to reproduce, but if it does occur: quit out of the program with Ctrl + C and relaunch the application. More information on this bug can be found on the Inquirer GitHub issues page found [here](https://github.com/moleculerjs/moleculer-cli/pull/72)
 
 ## Questions
 
